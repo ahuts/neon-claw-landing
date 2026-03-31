@@ -65,40 +65,11 @@ const HeroSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="w-full max-w-md lg:max-w-lg rounded-2xl bg-card border border-border p-8 animate-float">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 pb-4 border-b border-border">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-primary font-bold">⚡</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold">Automation Ready</p>
-                      <p className="text-xs text-muted-foreground">Plug-and-play OpenClaw skills</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-green-500">✓</span>
-                      <span>Job Research & Ghost Detection</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-green-500">✓</span>
-                      <span>Lead Capture & Conversion</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-green-500">✓</span>
-                      <span>AI Content & Voice Agents</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-border">
-                    <p className="text-sm font-semibold text-primary">10+ Skills Available</p>
-                    <p className="text-xs text-muted-foreground mt-1">From $19 - $39 one-time</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <img 
+                src={heroCrab} 
+                alt="OpenClaw duck-crab mascot" 
+                className="w-full max-w-md lg:max-w-lg rounded-2xl border border-border shadow-2xl animate-float"
+              />
           </motion.div>
         </div>
       </div>
