@@ -70,6 +70,7 @@ const HeroSection = () => {
                 alt="OpenClaw duck-crab mascot" 
                 className="w-full max-w-md lg:max-w-lg rounded-2xl border border-border shadow-2xl animate-float"
               />
+            </div>
           </motion.div>
         </div>
       </div>
