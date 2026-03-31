@@ -139,7 +139,7 @@ const products: Product[] = [
     icon: MessageSquare,
     tag: "New",
     tagColor: "yellow",
-    stripeUrl: "https://buy.stripe.com/x-autopilot-placeholder",
+    stripeUrl: "https://buy.stripe.com/8x2cN77IQ2AE1Lm6Fr4F206",
     details: {
       features: [
         "Post to X/Twitter automatically via API",
