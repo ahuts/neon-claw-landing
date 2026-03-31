@@ -68,7 +68,7 @@ const HeroSection = () => {
               <img 
                 src={heroCrab} 
                 alt="OpenClaw duck-crab mascot" 
-                className="w-full max-w-md lg:max-w-lg rounded-2xl border border-border shadow-2xl animate-float"
+                className="w-full max-w-xl lg:max-w-2xl rounded-2xl border border-border shadow-2xl animate-float"
               />
             </div>
           </motion.div>
