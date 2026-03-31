@@ -131,14 +131,36 @@ const products: Product[] = [
     icon: FileText,
   },
   {
-    id: "ai-content-engine",
-    name: "AI Content Engine",
-    description: "Generate weeks of social media, blog, and ad content in minutes with AI prompts.",
-    price: 34,
-    originalPrice: 49,
-    icon: BookOpen,
+    id: "x-autopilot-skill",
+    name: "X/Twitter Autopilot",
+    description: "Run your own X/Twitter account autonomously. Post, reply, and engage with OpenClaw + X API.",
+    price: 19,
+    originalPrice: 29,
+    icon: MessageSquare,
     tag: "New",
     tagColor: "yellow",
+    stripeUrl: "https://buy.stripe.com/x-autopilot-placeholder",
+    details: {
+      features: [
+        "Post to X/Twitter automatically via API",
+        "OAuth 1.0a authentication built-in",
+        "Character limit validation",
+        "Error handling and retry logic",
+        "Cron scheduling support for automated posting",
+      ],
+      requirements: [
+        "OpenClaw v2.0+",
+        "X Developer account (Free tier)",
+        "Node.js v18+",
+      ],
+      includes: [
+        "post-to-x.js script (direct API integration)",
+        "OAuth signature generation",
+        "Content templates and examples",
+        "Setup guide for X Developer Portal",
+        "Email delivery within 24h",
+      ],
+    },
   },
 ];
 
