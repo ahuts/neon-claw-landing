@@ -23,19 +23,17 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
           >
             <p className="text-sm font-semibold tracking-[0.2em] uppercase text-primary mb-6">
-              OPENCLAW SKILL + COMPLETE GUIDE
+              OPENCLAW SKILLS & AUTOMATION
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6">
-              Stop applying to{" "}
-              <span className="text-crab-red text-glow-red">ghost jobs.</span>
+              Automate your
+              <span className="text-crab-red text-glow-red"> workflow.</span>
               <br />
-              Start getting{" "}
-              <span className="text-primary text-glow-yellow">real offers.</span>
+              <span className="text-primary text-glow-yellow">Scale your output.</span>
             </h1>
             <p className="text-muted-foreground text-base md:text-lg max-w-lg mb-8 leading-relaxed">
-              30-40% of job postings are fake, stale, or already filled. Our AI-powered Job Research Agent 
-              detects ghost jobs before you waste time, researches companies for red flags, and tracks 
-              your applications so nothing falls through the cracks.
+              Premium OpenClaw skills, automation blueprints, and AI-powered tools. 
+              Build once, run forever. Each skill pays for itself on the first use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -43,19 +41,19 @@ const HeroSection = () => {
                 className="font-semibold gap-2 text-base"
                 onClick={scrollToProducts}
               >
-                Get the Skill — $29 <ArrowRight size={18} />
+                Browse Skills <ArrowRight size={18} />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="font-semibold text-base"
-                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                See How It Works
+                Learn More
               </Button>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
-              🔍 Works with LinkedIn & Indeed · 🤖 Runs locally with OpenClaw · 📊 Weekly reports included
+              🔧 Built for OpenClaw · 🤖 AI-Powered · 📦 Instant Delivery
             </p>
           </motion.div>
 
@@ -69,34 +67,33 @@ const HeroSection = () => {
               <div className="w-full max-w-md lg:max-w-lg rounded-2xl bg-card border border-border p-8 animate-float">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 pb-4 border-b border-border">
-                    <div className="w-10 h-10 rounded-full bg-crab-red/20 flex items-center justify-center">
-                      <span className="text-crab-red font-bold">👻</span>
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <span className="text-primary font-bold">⚡</span>
                     </div>
                     <div>
-                      <p className="font-semibold">Ghost Job Detected</p>
-                      <p className="text-xs text-muted-foreground">Circana — Software Architect</p>
+                      <p className="font-semibold">Automation Ready</p>
+                      <p className="text-xs text-muted-foreground">Plug-and-play OpenClaw skills</p>
                     </div>
-                    <span className="ml-auto text-crab-red font-bold text-sm">Score: 35</span>
                   </div>
                   
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm">
-                      <span className="text-yellow-500">⚠️</span>
-                      <span>No salary listed</span>
+                      <span className="text-green-500">✓</span>
+                      <span>Job Research & Ghost Detection</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <span className="text-yellow-500">⚠️</span>
-                      <span>Posting age unclear</span>
+                      <span className="text-green-500">✓</span>
+                      <span>Lead Capture & Conversion</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <span className="text-red-500">❌</span>
-                      <span>Recent layoffs reported</span>
+                      <span className="text-green-500">✓</span>
+                      <span>AI Content & Voice Agents</span>
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-border">
-                    <p className="text-sm font-semibold text-crab-red">Recommendation: AVOID</p>
-                    <p className="text-xs text-muted-foreground mt-1">Saved you from a company in turmoil</p>
+                    <p className="text-sm font-semibold text-primary">10+ Skills Available</p>
+                    <p className="text-xs text-muted-foreground mt-1">From $19 - $39 one-time</p>
                   </div>
                 </div>
               </div>
