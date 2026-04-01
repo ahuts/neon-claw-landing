@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/ui/dialog";
 
 export interface Product {
   id: string;
@@ -227,7 +227,8 @@ const ProductCard = ({ product, onAdd }: { product: Product; onAdd: (p: Product)
               {product.originalPrice && (
                 <span className="text-sm text-muted-foreground line-through">${product.originalPrice}</span>
               )}
-            </div>            <span className={`text-xs transition-colors ${product.comingSoon ? 'text-muted-foreground' : 'text-muted-foreground group-hover:text-foreground'}`}>
+            </div>
+            <span className={`text-xs transition-colors ${product.comingSoon ? 'text-muted-foreground' : 'text-muted-foreground group-hover:text-foreground'}`}>
               {product.comingSoon ? 'Coming Soon' : 'Click for details →'}
             </span>
           </div>
@@ -346,7 +347,7 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        {<!-- Available Now -->}
+        {/* Available Now */}
         <div className="mb-8">
           <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
@@ -360,7 +361,7 @@ const ProductsSection = () => {
           </div>
         </div>
 
-        {<!-- Coming Soon -->}
+        {/* Coming Soon */}
         <div>
           <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
