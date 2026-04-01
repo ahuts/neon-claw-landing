@@ -66,11 +66,11 @@ const products: Product[] = [
     id: "x-autopilot-skill",
     name: "X/Twitter Autopilot",
     description: "Run your own X/Twitter account autonomously. Post, reply, and engage with OpenClaw + X API.",
-    price: 19,
-    originalPrice: 29,
+    price: 15,
+    originalPrice: 19,
     icon: MessageSquare,
-    tag: "New",
-    tagColor: "yellow",
+    tag: "Launch Sale",
+    tagColor: "red",
     stripeUrl: "https://buy.stripe.com/8x2cN77IQ2AE1Lm6Fr4F206",
     details: {
       features: [
