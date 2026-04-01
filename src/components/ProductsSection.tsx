@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/ui/dialog";
+} from "@/components/ui/dialog";
 
 export interface Product {
   id: string;
