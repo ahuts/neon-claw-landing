@@ -21,6 +21,7 @@ export interface Product {
   tag?: string;
   tagColor?: "yellow" | "red";
   stripeUrl?: string;
+  comingSoon?: boolean;
   details?: {
     features: string[];
     requirements: string[];
@@ -28,55 +29,7 @@ export interface Product {
   };
 }
 
-const products: Product[] = [
-  {
-    id: "lead-capture-playbook",
-    name: "AI Lead Capture Playbook",
-    description: "Build automated funnels that capture and qualify leads 24/7 without manual effort.",
-    price: 29,
-    originalPrice: 49,
-    icon: Target,
-    tag: "Bestseller",
-    tagColor: "yellow",
-  },
-  {
-    id: "automation-blueprints",
-    name: "Automation Blueprints",
-    description: "Plug-and-play workflows to connect your tools and eliminate repetitive tasks.",
-    price: 39,
-    icon: Cpu,
-  },
-  {
-    id: "conversion-scripts",
-    name: "Conversion Script Pack",
-    description: "Battle-tested scripts for chatbots, SMS follow-ups, and email sequences that close.",
-    price: 24,
-    icon: MessageSquare,
-  },
-  {
-    id: "voice-ai-guide",
-    name: "Voice AI Setup Guide",
-    description: "Deploy voice agents that answer calls, qualify leads, and book appointments.",
-    price: 34,
-    originalPrice: 59,
-    icon: Mic,
-    tag: "Hot",
-    tagColor: "red",
-  },
-  {
-    id: "chatbot-builder",
-    name: "Chatbot Builder Kit",
-    description: "Train a 24/7 AI chatbot on your business data to handle FAQs and book meetings.",
-    price: 29,
-    icon: Bot,
-  },
-  {
-    id: "funnel-templates",
-    name: "High-Converting Funnels",
-    description: "Pre-built funnel templates designed to maximize opt-ins and reduce drop-off.",
-    price: 19,
-    icon: Layers,
-  },
+const availableProducts: Product[] = [
   {
     id: "job-researcher-skill",
     name: "Job Researcher Skill",
@@ -84,7 +37,7 @@ const products: Product[] = [
     price: 29,
     originalPrice: 48,
     icon: Briefcase,
-    tag: "New",
+    tag: "Available Now",
     tagColor: "yellow",
     stripeUrl: "https://buy.stripe.com/5kQ7sNfbib7acq08Nz4F205",
     details: {
@@ -110,18 +63,94 @@ const products: Product[] = [
     },
   },
   {
+    id: "x-twitter-autopilot",
+    name: "X/Twitter Autopilot",
+    description: "Post to X automatically, schedule content, and manage your presence with OpenClaw.",
+    price: 15,
+    originalPrice: 19,
+    icon: MessageSquare,
+    tag: "Available Now",
+    tagColor: "yellow",
+    stripeUrl: "https://buy.stripe.com/8x2cN77IQ2AE1Lm6Fr4F206",
+    details: {
+      features: [
+        "Post to X with direct API integration",
+        "Schedule posts with cron jobs",
+        "Automated content calendar",
+        "Engagement tracking",
+      ],
+      requirements: [
+        "OpenClaw v2.0+",
+        "X API credentials",
+        "Node.js v18+",
+      ],
+      includes: [
+        "Complete posting scripts",
+        "Cron scheduling setup",
+        "Content calendar templates",
+        "Email delivery within 24h",
+      ],
+    },
+  },
+];
+
+const comingSoonProducts: Product[] = [
+  {
+    id: "lead-researcher",
+    name: "Lead Researcher Agent",
+    description: "Find and enrich prospect data from LinkedIn, company websites, and public sources.",
+    price: 39,
+    icon: Target,
+    comingSoon: true,
+  },
+  {
+    id: "automation-blueprints",
+    name: "Automation Blueprints",
+    description: "Plug-and-play workflows to connect your tools and eliminate repetitive tasks.",
+    price: 39,
+    icon: Cpu,
+    comingSoon: true,
+  },
+  {
+    id: "conversion-scripts",
+    name: "Conversion Script Pack",
+    description: "Battle-tested scripts for chatbots, SMS follow-ups, and email sequences that close.",
+    price: 24,
+    icon: MessageSquare,
+    comingSoon: true,
+  },
+  {
+    id: "voice-ai-guide",
+    name: "Voice AI Setup Guide",
+    description: "Deploy voice agents that answer calls, qualify leads, and book appointments.",
+    price: 34,
+    originalPrice: 59,
+    icon: Mic,
+    comingSoon: true,
+  },
+  {
+    id: "chatbot-builder",
+    name: "Chatbot Builder Kit",
+    description: "Train a 24/7 AI chatbot on your business data to handle FAQs and book meetings.",
+    price: 29,
+    icon: Bot,
+    comingSoon: true,
+  },
+  {
+    id: "funnel-templates",
+    name: "High-Converting Funnels",
+    description: "Pre-built funnel templates designed to maximize opt-ins and reduce drop-off.",
+    price: 19,
+    icon: Layers,
+    comingSoon: true,
+  },
+  {
     id: "analytics-playbook",
     name: "Analytics & Tracking Guide",
     description: "Set up end-to-end analytics to know exactly where your leads come from and convert.",
     price: 22,
     icon: BarChart3,
-  },
-  {
-    id: "sms-marketing",
-    name: "SMS Marketing Playbook",
-    description: "Automated text-back sequences that re-engage missed calls within seconds.",
-    price: 27,
-    icon: Zap,
+    comingSoon: true,
   },
   {
     id: "email-sequences",
@@ -129,16 +158,7 @@ const products: Product[] = [
     description: "Proven email nurture sequences that warm leads and drive repeat purchases.",
     price: 24,
     icon: FileText,
-  },
-  {
-    id: "ai-content-engine",
-    name: "AI Content Engine",
-    description: "Generate weeks of social media, blog, and ad content in minutes with AI prompts.",
-    price: 34,
-    originalPrice: 49,
-    icon: BookOpen,
-    tag: "New",
-    tagColor: "yellow",
+    comingSoon: true,
   },
 ];
 
@@ -149,6 +169,32 @@ const ProductCard = ({ product, onAdd }: { product: Product; onAdd: (p: Product)
     e.stopPropagation();
     onAdd(product);
   };
+
+  if (product.comingSoon) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="group relative bg-card/50 border border-border/50 rounded-xl p-6 flex flex-col opacity-60 grayscale"
+      >
+        <span className="absolute -top-2.5 right-4 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground">
+          Coming Soon
+        </span>
+
+        <product.icon className="mb-4 text-muted-foreground" size={26} />
+
+        <h3 className="text-base font-bold mb-2 leading-tight text-muted-foreground">{product.name}</h3>
+        <p className="text-muted-foreground/70 text-sm leading-relaxed mb-5 flex-1">
+          {product.description}
+        </p>
+
+        <div className="flex items-end justify-between">
+          <span className="text-xl font-bold text-muted-foreground">${product.price}</span>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
@@ -322,8 +368,28 @@ const ProductsSection = () => {
           </p>
         </motion.div>
 
+        {/* Available Now Section */}
+        <div className="mb-4">
+          <p className="text-sm font-semibold text-primary mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            Available Now
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          {availableProducts.map((product) => (
+            <ProductCard key={product.id} product={product} onAdd={handleAdd} />
+          ))}
+        </div>
+
+        {/* Coming Soon Section */}
+        <div className="mb-4">
+          <p className="text-sm font-semibold text-muted-foreground mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-muted-foreground"></span>
+            Coming Soon
+          </p>
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {products.map((product) => (
+          {comingSoonProducts.map((product) => (
             <ProductCard key={product.id} product={product} onAdd={handleAdd} />
           ))}
         </div>
